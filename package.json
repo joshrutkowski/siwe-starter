@@ -6,15 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint && npx prettier --check .",
+    "lint:fix": "eslint . --fix && npm run format",
+    "format": "prettier --write ."
   },
   "dependencies": {
+    "iron-session": "^6.0.5",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "eslint": "8.9.0",
-    "eslint-config-next": "12.1.0"
+    "eslint-config-next": "12.1.0",
+    "ethers": "^5.5.4",
+    "prettier": "^2.5.1",
+    "siwe": "^1.1.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 180,
+    "semi": true
   }
 }
